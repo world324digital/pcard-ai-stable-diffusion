@@ -1,0 +1,847 @@
+/*
+ Theme Name:   Twenty Nineteen Child Theme
+ description: >-
+   A child theme of the Twenty Nineteen default WordPress theme
+ Author:       James
+ Template:     twentynineteen
+ Version:      1.0.0
+*/
+
+
+h2:before {
+  display: none !important;
+}
+
+.result-image {
+  width: 100%;
+  min-height: 256px;
+}
+
+.heart-icon {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: white;
+}
+
+.download-icon {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  color: white;
+}
+
+.download-icon:hover {
+  color: #e53b75;
+}
+
+.heart-icon:hover {
+  color: #e53b75;
+}
+
+.modifier-select {
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 14px;
+  border-radius: 0px;
+  width: 100%;
+}
+
+.modifier-select option {
+  border-top: 1px solid #8d8d8d;
+}
+
+.download-icon i,
+.heart-icon i {
+  font-size: 20px;
+}
+
+.result-image {
+  background-position: center !important;
+  background-size: cover !important;
+  border-radius: 5px !important;
+}
+
+.input-prompt {
+  width: 100%;
+  border: 1px solid #707070;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 18px;
+}
+
+.input-subscribe {
+  border: 1px solid #707070;
+  border-radius: 8px;
+}
+
+.result-image:hover,
+.result-image:active,
+.result-image:visited,
+.result-image.selected {
+  border: 3px solid #e53b75;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#wow-modal-window-1,
+#wow-modal-window-2 {
+  box-shadow: -1px 10px 10px #00000029 !important;
+  border-radius: 27px !important;
+}
+
+.mw-close-btn {
+  display: none !important;
+}
+
+.wow-modal-overlay {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.wow-modal-window {
+  padding: 45px !important;
+  top: 5% !important;
+}
+
+.modal-window-content {
+  overflow-y: inherit !important;
+}
+
+.modal-title {
+  font-size: 38px;
+  text-align: center;
+  padding-bottom: 10px;
+  font-family: 'Montserrat';
+}
+
+.btn-custom-primary {
+  color: #002200;
+  border: 1px solid #707070;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 15px;
+  padding: 12px 24px;
+  background: white;
+  font-weight: 500;
+}
+
+.btn-custom-primary:hover {
+  color: white;
+  border-color: #e53b75;
+  background: #e53b75;
+}
+
+.btn-custom-secondary {
+  color: white;
+  border: 1px solid #e53b75;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 21px;
+  padding: 12px 24px;
+  background: #e53b75;
+  font-weight: 500;
+}
+
+.btn-custom-secondary:hover {
+  color: #002200;
+  border-color: #707070;
+  background: white;
+}
+
+.btn-custom-info {
+  color: #0073aa;
+  border: 1px solid #0073aa;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 15px;
+  padding: 5px 24px;
+  background: white;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.btn-custom-info:hover {
+  color: white;
+  border-color: #0073aa;
+  background: #0073aa;
+}
+
+.share-alert {
+  background: #e53b750f;
+  border: 2px solid #e53b75;
+  border-radius: 13px;
+  margin: auto;
+  max-width: 768px;
+}
+
+.alert-text {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  padding: 22px 14px;
+}
+
+.alert-button {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.modify-alert-text p {
+  margin-bottom: 0 !important;
+}
+
+.share-link p {
+  margin-bottom: 0 !important;
+}
+
+.subscribe-label p {
+  margin-bottom: 0 !important;
+}
+
+@media screen and (max-width: 360px) {
+  #wow-modal-overlay-1 .modal-title {
+    font-size: smaller;
+  }
+
+  #wow-modal-overlay-1 .alert-text {
+    font-size: small;
+    padding: 10px 5px;
+    text-align: center;
+  }
+
+  #wow-modal-overlay-1 #share-image {
+    padding: 7px 24px;
+    margin-bottom: 10px;
+  }
+
+  #banner-img {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #wow-modal-overlay-1 .modal-title {
+    font-size: xx-large;
+  }
+
+  #wow-modal-overlay-1 .alert-text {
+    font-size: small;
+    padding: 10px 5px;
+    text-align: center;
+  }
+
+  #wow-modal-overlay-1 #share-image {
+    padding: 5px 24px;
+  }
+
+  #wow-modal-overlay-1 .share-alert {
+    padding: 0px 5px;
+  }
+
+  #banner-img {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .hfe-nav-menu-icon {
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #banner-img {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #banner-img {
+    display: flex !important;
+  }
+}
+
+.credit-modal-title {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Montserrat';
+}
+
+.pricing-container {
+  background: #e7f4fb;
+  padding: 15px;
+}
+
+#wow-modal-window-2 {
+  font-family: 'Montserrat';
+}
+
+.pricing-item {
+  margin: 0;
+  background: white;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.pricing-item:last-child {
+  margin-bottom: 0;
+}
+
+.item-amount {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.item-price {
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+.item-price span {
+  margin-right: 5px;
+  color: #1a7a29;
+  font-weight: bold;
+}
+
+.item-left,
+.item-right {
+  display: flex;
+  align-items: center;
+}
+
+.item-right {
+  justify-content: center;
+  margin: 10px 0 0;
+}
+
+.item-right button {
+  width: 100%;
+}
+
+.review {
+  margin: 15px;
+  padding: 15px 0;
+}
+
+.review-content {
+  font-size: 18px;
+  color: #707070;
+  text-align: center;
+}
+
+.review-author {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.faq-title {
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.faq-item {
+  margin: 30px 15px;
+}
+
+.faq-question {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.faq-answer {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.credit-icon {
+  width: 16px;
+  margin-right: 5px;
+}
+
+.wow-modal-close-2 {
+  cursor: pointer;
+}
+
+#wow-modal-window-2 .modal-window-content {
+  max-width: 576px;
+  margin: auto;
+}
+
+
+/* User login and resgitration, profile part */
+.uwp_page .btn-primary {
+  background-color: #e53b75 !important;
+  border-color: #e53b75 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.uwp_page .btn-primary:hover {
+  background-color: white !important;
+  color: #002200;
+  border: 1px solid #707070 !important;
+}
+
+.uwp_page {
+  font-family: 'Montserrat';
+}
+
+.uwp_page .form-control {
+  border-radius: 8px !important;
+}
+
+.uwp_page .bsui .input-group-text {
+  border-radius: 8px !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.uwp_page input[type='password'] {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.toggle-menu .hfe-nav-menu__toggle {
+  /* display: flex !important;
+  justify-content: end !important;
+  margin: 0 !important;
+  margin-right: 15px !important; */
+  /* margin-top: 2px !important; */
+}
+
+.toggle-menu nav {
+  background: transparent linear-gradient(90deg, #00000000 0%, var(--unnamed-color-000000) 100%) 0% 0% no-repeat padding-box !important;
+  background: transparent linear-gradient(90deg, #00000025 0%, #000000 100%) 0% 0% no-repeat padding-box !important;
+}
+
+.toggle-menu li {
+  /* padding: 5px 15px !important; */
+}
+
+.top-mark mark {
+  padding: 0 2px !important;
+  background-color: white !important;
+}
+
+.btn-custom a {
+  text-decoration: none !important;
+}
+
+select:focus>option:checked {
+  border: 1px solid #707070;
+  /* selected */
+}
+
+.prompt-text>div {
+  min-height: 50px;
+}
+
+.prompt-text p {
+  margin-bottom: 0 !important;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.toggle-menu .hfe-menu-item {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+.toggle-menu .hfe-nav-menu-icon {
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .toggle-menu ul.hfe-nav-menu {
+    background: #e53b75 !important;
+  }
+}
+
+.back-card-form {
+  position: absolute;
+  bottom: 55px;
+}
+
+.back-left {
+  padding: 0 20px;
+}
+
+.back-right {
+  padding: 0 50px;
+}
+
+.back-left .form-group {
+  display: flex;
+  align-items: baseline;
+}
+
+.back-left label {
+  min-width: 100px;
+}
+
+.card-back {
+  font-family: 'Montserrat';
+  font-size: 20px;
+  color: #707070;
+  font-weight: bold;
+}
+
+.from-name {
+  margin-top: 100px;
+}
+
+.card-back #msg,
+#greeting_msg {
+  border-radius: 0;
+  min-height: 255px;
+}
+
+#card-message {
+  min-height: 255px;
+}
+
+.agree-section a {
+  color: #e53b75;
+}
+
+.post-card-background {
+  min-height: 750px !important;
+  padding: 50px;
+  display: flex;
+}
+
+.form-left .form-group {
+  display: flex;
+  align-items: baseline;
+
+}
+
+.post-card-background label {
+  min-width: 100px;
+}
+
+.post-card-background {
+  font-family: 'Montserrat';
+  font-size: 20px;
+  color: #707070;
+  /* font-weight: bold; */
+}
+
+.post-card-background p {
+  font-size: 16px;
+}
+
+.post-card-background #msg {
+  border-radius: 0;
+  min-height: 255px;
+}
+
+#header-nav {
+  position: absolute;
+}
+
+.toggle-menu li.btn-create {
+  background: #e53b75;
+  color: white;
+}
+
+.toggle-menu li.btn-create:hover {
+  background: white;
+}
+
+.toggle-menu li.btn-create>a:hover {
+  color: #e53b75 !important;
+}
+
+.toggle-menu .sub-menu a {
+  justify-content: flex-start !important;
+}
+
+#mc-embedded-subscribe {
+  color: #002200 !important;
+  border: 1px solid #707070 !important;
+  font-family: "Montserrat", Sans-serif !important;
+  font-size: 15px !important;
+  padding: 12px 24px !important;
+  background: white !important;
+  font-weight: 500 !important;
+  /* width: 100%; */
+  margin-top: 10px;
+  border-radius: 0 !important;
+}
+
+#mc-embedded-subscribe:hover {
+  color: white !important;
+  border-color: #e53b75 !important;
+  background: #e53b75 !important;
+}
+
+#mc_embed_signup div.mce_inline_error {
+  background-color: #e53b75 !important;
+}
+
+#mc_embed_signup input.mce_inline_error {
+  border-color: #e53b75 !important;
+}
+
+.toggle-menu .sub-menu {
+  left: -15px !important;
+}
+
+#wow-modal-close-1,
+#wow-modal-id-3 {
+  display: none;
+}
+
+.share-container>p {
+  color: #707070;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  text-transform: none;
+}
+
+.share-container {
+  width: 270px;
+  margin: auto;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0 20px 0;
+}
+
+.social-icon {
+  background-color: #E5E5E5;
+  border-radius: 50%;
+  transition: all .3s;
+  color: #818a91;
+  padding: 10px 14px;
+}
+
+.social-icon i {
+  color: black;
+}
+
+.social-icon:hover {
+  background-color: #2DC2FF;
+  opacity: .9;
+  color: #fff;
+}
+
+.social-icon:hover i {
+  color: #fff;
+}
+
+.share-part {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #707070;
+  background-color: #E5E5E5;
+  border-radius: 10px 10px 10px 10px;
+  padding: 5px 10px;
+}
+
+.btn-share {
+  font-family: "Montserrat", Sans-serif;
+  font-weight: 500;
+  background-color: #2DC2FF;
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: #2DC2FF;
+  border-radius: 5px 5px 5px 5px;
+  font-size: 12px;
+  padding: 5px 10px;
+}
+
+.btn-share:hover {
+  color: #2DC2FF;
+  background-color: #FFFFFF;
+}
+
+#wow-modal-window-3 {
+  min-height: 85%;
+}
+
+.share-part p {
+  margin-bottom: 0;
+  font-size: 13px;
+}
+
+.card-message p {
+  max-height: 285px;
+  overflow-y: auto;
+  min-height: 285px;
+}
+
+.card-image .result-image:hover {
+  border-color: transparent !important;
+  border-radius: 5px !important;
+  border: 0px !important;
+}
+
+#post-card {
+  display: none;
+}
+
+.modifier-container {
+}
+
+#card-message p {
+  max-width: 640px;
+  min-width: 640px;
+  display: inline-grid;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  text-align: left;
+  z-index: 1;
+  width: 200px;
+  color: black;
+  font-size: 12px;
+  background-color: #fff5dc;
+  border-radius: 7px;
+  padding: 10px 15px 10px 15px;
+  font-family: "Montserrat", Sans-serif;
+}
+
+.tooltip-text a {
+  color: #e53b75;
+}
+
+/* .hover-text:hover .tooltip-text {
+  visibility: visible;
+} */
+
+#top {
+  top: -40px;
+  left: -50%;
+}
+
+#bottom {
+  top: 25px;
+  left: -50%;
+}
+
+#left {
+  top: -8px;
+  right: 120%;
+}
+
+#right {
+  bottom: -10px;
+  left: 120%;
+}
+
+.hover-text {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.postcard-preview {
+  display: none;
+}
+
+.preview-controls {
+  display: none;
+}
+
+.greetingcard-preview {
+  display: none;
+}
+
+.greetingcard-preview .form-group {
+  justify-content: space-between;
+}
+
+.greetingcard-preview .form-group>div {
+  width: 80%;
+}
+
+.postcard-preview .form-group>div {
+  width: 65%;
+}
+
+ul.sub-menu li.hide {
+  display: none;
+}
+
+#evolve-results,
+.evolve-results-title,
+#filter-section {
+  display: none;
+}
+
+#greeting-front-card img,
+#front-card img {
+  height: 256px !important;
+}
+
+/* Hide DDIM results in create page */
+#ddim-results {
+  display: none !important;
+}
+
+/* Hide DDIM results in create page */
+
+
+/* Hide Send Digital Button in Create Card page */
+#btn-send-digital {
+  /* display: none !important; */
+}
+
+/* Hide Send Digital Button in Create Card page */
+
+@media (max-width: 767px) {
+  #right {
+    top: -40px;
+    left: -205px;
+  }
+
+  .post-card-background {
+    padding: 7px;
+    background-image: none !important;
+  }
+
+  .from-name {
+    margin-top: 0px;
+  }
+
+  .alert-button {
+    padding-top: 5px;
+    padding-bottom: 10px;
+  }
+}
+
+.pricing-item .item-right input[type='submit'] {
+  color: #0073aa !important;;
+  border: 1px solid #0073aa !important;
+  font-family: "Montserrat", Sans-serif !important;
+  font-size: 15px !important;
+  padding: 8px 24px !important;
+  background: white !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  border-radius: 0 !important;
+}
+
+.pricing-item .item-right input[type='submit']:hover {
+  color: white !important;
+  border-color: #0073aa !important;
+  background: #0073aa !important;
+}
