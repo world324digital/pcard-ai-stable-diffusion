@@ -321,70 +321,83 @@ add_action('wp_ajax_nopriv_evolve_action', 'evolve_stable_diffusion');
 
 function evolve_stable_diffusion()
 {
-   // if (is_user_logged_in()) {
-   if (isset($_POST['prompt']) && isset($_POST['init_image'])) {
-      $prompt = $_POST['prompt'];
-      $init_image = $_POST['init_image'];
 
-      $curl = curl_init();
+   $result = array(
+      'id' => '',
+      'status' => 'fail',
+      'message' => '',
+      'credits' => '0'
+   );
 
-      $input = array(
-         'guidance_scale' => 7.5,
-         'height' => '256',
-         'num_inference_steps' => 50,
-         'num_outputs' => '4',
-         'prompt' => $prompt,
-         'init_image' => $init_image,
-         'prompt_strength' => 0.8,
-         'scheduler' => 'K-LMS',
-         'width' => '384'
-      );
 
-      $params = array(
-         'version' => STABLE_DIFFUSION_VERSION,
-         'input' => $input
-      );
+   if (is_user_logged_in()) {
+      $user_id = get_current_user_id();
+      $credits = (int)get_user_meta($user_id, 'credits')[0];
+      if ($credits > 1) {
+         if (isset($_POST['prompt']) && isset($_POST['init_image'])) {
+            $prompt = $_POST['prompt'];
+            $init_image = $_POST['init_image'];
 
-      curl_setopt_array($curl, array(
-         CURLOPT_URL => 'https://api.replicate.com/v1/predictions',
-         CURLOPT_RETURNTRANSFER => true,
-         CURLOPT_ENCODING => '',
-         CURLOPT_MAXREDIRS => 10,
-         CURLOPT_TIMEOUT => 0,
-         CURLOPT_FOLLOWLOCATION => true,
-         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-         CURLOPT_CUSTOMREQUEST => 'POST',
-         CURLOPT_POSTFIELDS => json_encode($params),
-         CURLOPT_HTTPHEADER => array(
-            'Authorization: Token ' . REPLICATE_API_TOKEN,
-            'Content-Type: application/json'
-         ),
-      ));
+            $curl = curl_init();
 
-      $response = curl_exec($curl);
-      $response = json_decode($response);
-      curl_close($curl);
+            $input = array(
+               'guidance_scale' => 7.5,
+               'height' => '256',
+               'num_inference_steps' => 50,
+               'num_outputs' => '4',
+               'prompt' => $prompt,
+               'init_image' => $init_image,
+               'prompt_strength' => 0.8,
+               'scheduler' => 'K-LMS',
+               'width' => '384'
+            );
 
-      $result = array(
-         'id' => ''
-      );
+            $params = array(
+               'version' => STABLE_DIFFUSION_VERSION,
+               'input' => $input
+            );
 
-      $result['id'] = $response->id;
+            curl_setopt_array($curl, array(
+               CURLOPT_URL => 'https://api.replicate.com/v1/predictions',
+               CURLOPT_RETURNTRANSFER => true,
+               CURLOPT_ENCODING => '',
+               CURLOPT_MAXREDIRS => 10,
+               CURLOPT_TIMEOUT => 0,
+               CURLOPT_FOLLOWLOCATION => true,
+               CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+               CURLOPT_CUSTOMREQUEST => 'POST',
+               CURLOPT_POSTFIELDS => json_encode($params),
+               CURLOPT_HTTPHEADER => array(
+                  'Authorization: Token ' . REPLICATE_API_TOKEN,
+                  'Content-Type: application/json'
+               ),
+            ));
+
+            $response = curl_exec($curl);
+            $response = json_decode($response);
+            curl_close($curl);
+
+            $result['id'] = $response->id;
+            $result['status'] = 'success';
+            $result['credits'] = $credits - 1;
+            update_user_meta($user_id, 'credits', $credits - 1);
+
+            echo json_encode($result);
+         }
+
+         wp_die();
+      } else {
+         $result['message'] = 'Your credits are not enough to evovle image!';
+
+         echo json_encode($result);
+         wp_die();
+      }
+   } else {
+      $result['message'] = 'Please login first';
 
       echo json_encode($result);
+      wp_die();
    }
-
-   wp_die();
-   // }
-   // else {
-   //    $result = array(
-   //       'status' => 'failed',
-   //       // 'message' => 'You can create images after sign in!'
-   //    );
-   //    // echo json_encode($result);
-   //    var_dump($result);
-   //    wp_die();
-   // }
 }
 
 add_action('wp_ajax_save_postcard_action', 'save_postcard');
@@ -673,7 +686,7 @@ endif;
 add_action('wp_ajax_get_user_credits_action', 'get_user_credits');
 add_action('wp_ajax_nopriv_get_user_credits_action', 'get_user_credits');
 
-function get_user_credits($atts)
+function get_user_credits()
 {
    $user_id = get_current_user_id();
    $credits = get_user_meta($user_id, 'credits');

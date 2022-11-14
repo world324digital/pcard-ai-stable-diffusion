@@ -46,7 +46,7 @@ $(document).ready(function () {
     $('#btn-buy-credit').click(function () {
         $('#wow-modal-id-2').trigger('click');
     })
-    
+
     $('#btn-create-card').click(function () {
         var imageUrl = $('.result-image.selected').data('url');
         if (imageUrl != undefined && imageUrl != '') {
@@ -56,11 +56,11 @@ $(document).ready(function () {
     })
 
     $('.hover-text i').click(function () {
-        var visibility =  $(this).parent().find('.tooltip-text').css('visibility');
+        var visibility = $(this).parent().find('.tooltip-text').css('visibility');
         if (visibility == 'hidden') {
-            $(this).parent().find('.tooltip-text').css({visibility: 'visible'});
+            $(this).parent().find('.tooltip-text').css({ visibility: 'visible' });
         } else {
-            $(this).parent().find('.tooltip-text').css({visibility: 'hidden'});
+            $(this).parent().find('.tooltip-text').css({ visibility: 'hidden' });
         }
     });
 
@@ -99,7 +99,7 @@ $(document).ready(function () {
             if (perspective != undefined) {
                 text += ' ' + perspective;
             }
-            if (text != ''){
+            if (text != '') {
                 getEvovleResults(text);
             } else {
                 alert('Please select modifiers!');
@@ -112,11 +112,11 @@ $(document).ready(function () {
         // }
     })
 
-    function init_page () {
+    function init_page() {
         isEvovledResult = false;
         prompt = localStorage.getItem('prompt');
         imageUrl = localStorage.getItem('image');
-    
+
         if (imageUrl != undefined && imageUrl != '') {
             $('#evolve-img img').attr('src', imageUrl);
         }
@@ -139,11 +139,15 @@ $(document).ready(function () {
             data: data,
             success: function (response) {
                 var result = JSON.parse(response);
-                if (result.id != undefined) {
+                if (result.id != undefined && result.status == 'success') {
                     $('#evolve-results').show();
                     $('.evolve-results-title').show();
                     $('.evolve-result-toggle').hide();
                     getPredictResultsOfKLMS(result.id);
+                    $('#credit-value').text(result.credits);
+                    $('.credit_value').text(result.credits);
+                } else {
+                    alert(result.message);
                 }
             }
         });
