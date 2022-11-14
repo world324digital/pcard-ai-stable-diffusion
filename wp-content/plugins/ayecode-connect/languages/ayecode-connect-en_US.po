@@ -1,0 +1,486 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: AyeCode Connect 1.2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-16 17:33+0000\n"
+"PO-Revision-Date: 2021-03-16 17:34+0000\n"
+"Last-Translator: \n"
+"Language-Team: AyeCode Ltd <contact@ayecode.io>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;__ngettext:1,2;__ngettext_noop:1,2;_c;_e;_ex:1,2c;"
+"_n:1,2;_n_noop:1,2;_nc:4c,1,2;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;gettext;"
+"gettext_noop\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 2.3\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: ayecode-connect.php:81 includes/class-ayecode-demo-content.php:250
+msgid "Settings"
+msgstr ""
+
+#: includes/class-ayecode-connect-remote-actions.php:1407
+msgid "Download source not valid."
+msgstr ""
+
+#: includes/class-ayecode-connect-settings.php:117
+msgid ""
+"Plugin installed, this should resolve any update issues, if you still have "
+"issues please contact support."
+msgstr ""
+
+#: includes/class-ayecode-connect-settings.php:119
+msgid "Something went wrong, please contact support."
+msgstr ""
+
+#: includes/class-ayecode-connect-settings.php:249
+msgid "Plugin and theme update notifications must be enabled first"
+msgstr ""
+
+#: includes/class-ayecode-connect-settings.php:338
+#: includes/class-ayecode-connect-settings.php:528
+#, php-format
+msgid "Auto expires in %s"
+msgstr ""
+
+#: includes/class-ayecode-connect-settings.php:410
+#: includes/class-ayecode-demo-content.php:161
+msgid "Something went wrong, try refreshing the page and trying again."
+msgstr ""
+
+#: includes/class-ayecode-connect-settings.php:411
+#: includes/class-ayecode-demo-content.php:162
+msgid "Are you sure you with to disconnect your site?"
+msgstr ""
+
+#: includes/class-ayecode-connect-settings.php:450
+msgid ""
+"One click addon installs, live documentation search, support right from your "
+"WordPress Dashboard"
+msgstr ""
+
+#: includes/class-ayecode-connect-settings.php:458
+#, php-format
+msgid "You are connected to AyeCode Connect as user: %s"
+msgstr ""
+
+#: includes/class-ayecode-connect-settings.php:465
+msgid "Plugin and theme update notifications"
+msgstr ""
+
+#: includes/class-ayecode-connect-settings.php:468
+#: includes/class-ayecode-connect-settings.php:486
+#: includes/class-ayecode-connect-settings.php:504
+#: includes/class-ayecode-connect-settings.php:532
+#: includes/class-ayecode-connect-settings.php:549
+#: includes/class-ayecode-connect-settings.php:596
+msgid "Loading..."
+msgstr ""
+
+#: includes/class-ayecode-connect-settings.php:483
+msgid "One click addon installs, no more license keys"
+msgstr ""
+
+#: includes/class-ayecode-connect-settings.php:501
+msgid "Documentation and Support Widget"
+msgstr ""
+
+#: includes/class-ayecode-connect-settings.php:525
+msgid "Temporary Support User Access"
+msgstr ""
+
+#: includes/class-ayecode-connect-settings.php:554
+msgid "Disconnect site"
+msgstr ""
+
+#: includes/class-ayecode-connect-settings.php:573
+msgid "Clear all licenses"
+msgstr ""
+
+#: includes/class-ayecode-connect-settings.php:593
+msgid ""
+"Another plugin is calling the get_plugins() function too early which may "
+"block updates. We can try to fix this by calling our filter first with a "
+"must use plugin."
+msgstr ""
+
+#: includes/class-ayecode-connect-settings.php:594
+msgid "Install now"
+msgstr ""
+
+#: includes/class-ayecode-connect-settings.php:608
+msgid "You must connect your site before you can import demo content."
+msgstr ""
+
+#: includes/class-ayecode-connect-settings.php:613
+msgid ""
+"By clicking the <b>Connect Site</b> button, you agree to our <a "
+"href='https://ayecode.io/terms-and-conditions/' target='_blank' class='text-"
+"muted' ><u>Terms of Service</u></a> and to share details with AyeCode Ltd"
+msgstr ""
+
+#: includes/class-ayecode-connect-settings.php:616
+msgid "Connect Site"
+msgstr ""
+
+#: includes/class-ayecode-connect-settings.php:623
+msgid "Your website URL has changed, please re-connect with your new URL."
+msgstr ""
+
+#: includes/class-ayecode-connect-settings.php:632
+msgid ""
+"It looks like you might be running on localhost, AyeCode Connect will only "
+"work on a live website."
+msgstr ""
+
+#: includes/class-ayecode-connect-settings.php:645
+msgid "AyeCode Ltd are the creators of:"
+msgstr ""
+
+#: includes/class-ayecode-connect.php:168
+msgid ""
+"<b>AyeCode Connected!</b> You can now install any addons you have a license "
+"for and your license keys will automatically be synced."
+msgstr ""
+
+#: includes/class-ayecode-connect.php:373
+msgid "Invalid Registration Data"
+msgstr ""
+
+#: includes/class-ayecode-connect.php:377
+msgid "Invalid Secret"
+msgstr ""
+
+#: includes/class-ayecode-connect.php:683
+#, php-format
+msgid "Domain `%1$s` just failed is_usable_domain check as it is empty."
+msgstr ""
+
+#: includes/class-ayecode-connect.php:714
+#, php-format
+msgid ""
+"Domain `%1$s` just failed is_usable_domain check as it is in the forbidden "
+"array."
+msgstr ""
+
+#: includes/class-ayecode-connect.php:729
+#, php-format
+msgid ""
+"Domain `%1$s` just failed is_usable_domain check as it uses an invalid top "
+"level domain."
+msgstr ""
+
+#: includes/class-ayecode-connect.php:1085
+#: includes/class-ayecode-connect.php:1101
+#: includes/class-ayecode-connect.php:1320
+msgid "Missing Authorization Header."
+msgstr ""
+
+#: includes/class-ayecode-connect.php:1107
+#: includes/class-ayecode-connect.php:1326
+#: includes/class-ayecode-connect.php:1332
+msgid "Invalid Authorization Header."
+msgstr ""
+
+#: includes/class-ayecode-connect.php:1114
+msgid "Missing blog token."
+msgstr ""
+
+#: includes/class-ayecode-connect.php:1119
+#: includes/class-ayecode-connect.php:1340
+msgid "You are not authorized to do that."
+msgstr ""
+
+#: includes/class-ayecode-connect.php:1391
+msgid "Specify an action"
+msgstr ""
+
+#: includes/class-ayecode-connect.php:1552
+#, php-format
+msgid ""
+"<b>AyeCode Connect:</b> Your website URL has changed, please %sre-connect%s "
+"this site."
+msgstr ""
+
+#: includes/class-ayecode-demo-content.php:196
+msgid ""
+"This feature is still in BETA, please only use on a development site. Please "
+"provide feedback and report any issues so this feature can be improved."
+msgstr ""
+
+#: includes/class-ayecode-demo-content.php:230
+msgid "Importing Demo"
+msgstr ""
+
+#: includes/class-ayecode-demo-content.php:238 templates/import/site.php:49
+msgid "Theme"
+msgstr ""
+
+#: includes/class-ayecode-demo-content.php:244 templates/import/site.php:64
+msgid "Plugins"
+msgstr ""
+
+#: includes/class-ayecode-demo-content.php:256
+msgid "Categories"
+msgstr ""
+
+#: includes/class-ayecode-demo-content.php:262
+msgid "Page Templates"
+msgstr ""
+
+#: includes/class-ayecode-demo-content.php:268
+msgid "Dummy Posts"
+msgstr ""
+
+#: includes/class-ayecode-demo-content.php:277
+msgid "Widgets"
+msgstr ""
+
+#: includes/class-ayecode-demo-content.php:283
+msgid "Menus"
+msgstr ""
+
+#: includes/class-ayecode-demo-content.php:296
+msgid "Import"
+msgstr ""
+
+#: includes/class-ayecode-demo-content.php:321
+msgid ""
+"This import may remove all current GeoDirectory data, please only proceed if "
+"you are ok with this."
+msgstr ""
+
+#: includes/class-ayecode-demo-content.php:331
+msgid "Importing..."
+msgstr ""
+
+#: includes/class-ayecode-demo-content.php:401
+msgid "ERROR"
+msgstr ""
+
+#: includes/class-ayecode-demo-content.php:439
+msgid "View Site"
+msgstr ""
+
+#: includes/class-ayecode-demo-content.php:751
+msgid "The theme installation failed."
+msgstr ""
+
+#: templates/import/site.php:34 templates/import/site.php:76
+msgid "Paid"
+msgstr ""
+
+#: templates/import/site.php:40
+#, php-format
+msgid ""
+"This is a 3rd party paid theme, please install and activate this theme "
+"FIRST. %sGet Product%s"
+msgstr ""
+
+#: templates/import/site.php:45 templates/import/site.php:78
+msgid "Free"
+msgstr ""
+
+#: templates/import/site.php:89
+#, php-format
+msgid ""
+"This is a 3rd party paid product, please install and activate this plugin "
+"FIRST. %sGet Product%s"
+msgstr ""
+
+#: templates/import/site.php:91
+msgid "Paid 3rd Party"
+msgstr ""
+
+#: templates/import/site.php:129
+msgid "Requires Elementor Pro"
+msgstr ""
+
+#: templates/import/site.php:137
+msgid "View"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:1029
+#: vendor/ayecode/wp-font-awesome-settings/wp-font-awesome-settings.php:304
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:1034
+msgid "Here you can adjust settings if you are having compatibility issues."
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:1041
+#: vendor/ayecode/wp-font-awesome-settings/wp-font-awesome-settings.php:408
+msgid "Frontend"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:1045
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:1083
+msgid "Load CSS"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:1048
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:1086
+msgid "Compatibility Mode (default)"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:1049
+msgid "Full Mode"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:1050
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:1088
+msgid "Disabled"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:1057
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:1095
+msgid "Load JS"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:1060
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:1098
+msgid "Core + Popper (default)"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:1061
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:1099
+msgid "Popper"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:1062
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:1100
+msgid "Required functions only"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:1063
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:1101
+msgid "Disabled (not recommended)"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:1070
+msgid "HTML Font Size (px)"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:1073
+msgid ""
+"Our font sizing is rem (responsive based) here you can set the html font "
+"size in-case your theme is setting it too low."
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:1079
+#: vendor/ayecode/wp-font-awesome-settings/wp-font-awesome-settings.php:410
+msgid "Backend"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:1087
+msgid "Full Mode (will cause style issues)"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:1108
+msgid "Disable load on URL"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:1110
+msgid ""
+"If you have backend conflict you can enter a partial URL argument that will "
+"disable the loading of AUI on those pages. Add each argument on a new line."
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:1131
+msgid "AyeCode UI"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:1146
+msgid "Primary Color"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:1159
+msgid "Secondary Color"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/components/class-aui-component-pagination.php:29
+msgid "Posts navigation"
+msgstr ""
+
+#: vendor/ayecode/wp-font-awesome-settings/wp-font-awesome-settings.php:336
+msgid "Type"
+msgstr ""
+
+#: vendor/ayecode/wp-font-awesome-settings/wp-font-awesome-settings.php:341
+msgid "CSS (default)"
+msgstr ""
+
+#: vendor/ayecode/wp-font-awesome-settings/wp-font-awesome-settings.php:344
+msgid "Kits (settings managed on fontawesome.com)"
+msgstr ""
+
+#: vendor/ayecode/wp-font-awesome-settings/wp-font-awesome-settings.php:351
+msgid "Kit URL"
+msgstr ""
+
+#: vendor/ayecode/wp-font-awesome-settings/wp-font-awesome-settings.php:359
+#, php-format
+msgid "Requires a free account with Font Awesome. %sGet kit url%s"
+msgstr ""
+
+#: vendor/ayecode/wp-font-awesome-settings/wp-font-awesome-settings.php:369
+msgid "Version"
+msgstr ""
+
+#: vendor/ayecode/wp-font-awesome-settings/wp-font-awesome-settings.php:373
+#, php-format
+msgid "Latest - %s (default)"
+msgstr ""
+
+#: vendor/ayecode/wp-font-awesome-settings/wp-font-awesome-settings.php:402
+msgid "Enqueue"
+msgstr ""
+
+#: vendor/ayecode/wp-font-awesome-settings/wp-font-awesome-settings.php:406
+msgid "Frontend + Backend (default)"
+msgstr ""
+
+#: vendor/ayecode/wp-font-awesome-settings/wp-font-awesome-settings.php:417
+msgid "Enable pro"
+msgstr ""
+
+#: vendor/ayecode/wp-font-awesome-settings/wp-font-awesome-settings.php:424
+#, php-format
+msgid "Requires a subscription. %sLearn more%s %sManage my allowed domains%s"
+msgstr ""
+
+#: vendor/ayecode/wp-font-awesome-settings/wp-font-awesome-settings.php:436
+msgid "Enable v4 shims compatibility"
+msgstr ""
+
+#: vendor/ayecode/wp-font-awesome-settings/wp-font-awesome-settings.php:442
+msgid ""
+"This enables v4 classes to work with v5, sort of like a band-aid until "
+"everyone has updated everything to v5."
+msgstr ""
+
+#: vendor/ayecode/wp-font-awesome-settings/wp-font-awesome-settings.php:448
+msgid "Enable JS pseudo elements (not recommended)"
+msgstr ""
+
+#: vendor/ayecode/wp-font-awesome-settings/wp-font-awesome-settings.php:455
+msgid ""
+"Used only with the JS version, this will make pseudo-elements work but can "
+"be CPU intensive on some sites."
+msgstr ""
+
+#: vendor/ayecode/wp-font-awesome-settings/wp-font-awesome-settings.php:461
+msgid "Dequeue"
+msgstr ""
+
+#: vendor/ayecode/wp-font-awesome-settings/wp-font-awesome-settings.php:467
+msgid ""
+"This will try to dequeue any other Font Awesome versions loaded by other "
+"sources if they are added with `font-awesome` or `fontawesome` in the name."
+msgstr ""
