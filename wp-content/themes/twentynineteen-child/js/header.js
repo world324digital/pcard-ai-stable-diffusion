@@ -65,7 +65,6 @@ $(document).ready(function () {
                 var result = JSON.parse(response);
                 $('#credit-value').text(result);
                 $('.credit_value').text(result);
-
             }
         });
     }

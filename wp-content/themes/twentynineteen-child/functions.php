@@ -1,7 +1,8 @@
 <?php
 
 define("STABLE_DIFFUSION_VERSION", "8abccf52e7cba9f6e82317253f4a3549082e966db5584e92c808ece132037776");
-define("REPLICATE_API_TOKEN", "41c44fecf2994ab460b87c1a87fcc19332d7a224");
+// define("REPLICATE_API_TOKEN", "41c44fecf2994ab460b87c1a87fcc19332d7a224");
+define("REPLICATE_API_TOKEN", "b6fe04eadc47f383dcb186f34c2d220493586c98");
 
 add_action('wp_enqueue_scripts', 'enqueue_parent_styles');
 
@@ -741,7 +742,8 @@ add_action('wp_ajax_nopriv_add_credits_action', 'add_user_credits');
 function add_user_credits()
 {
    $result = array(
-      'status' => 'fail'
+      'status' => 'fail',
+      'credits' => '0'
    );
    if ($_POST['credit_product_id']) {
       $product_id = $_POST['credit_product_id'];
@@ -754,6 +756,8 @@ function add_user_credits()
       $current_credits = get_user_meta($user_id, 'credits')[0];
       $updated_amount = (int)$credit_amount + (int)$current_credits;
       update_user_meta($user_id, 'credits', $updated_amount);
+      $result['status'] = 'success';
+      $result['credits'] = $updated_amount;
    }
    echo json_encode($result);
    wp_die();

@@ -17,7 +17,11 @@ $(document).ready(function () {
             success: function (response) {
                 var result = JSON.parse(response);
                 localStorage.removeItem('credit_product_id');
-                console.log(result);
+                console.log(result.credits);
+                if (result.status == 'success') {
+                    $('#credit-value').text(result.credits.toString());
+                    $('#credit-shortcode div').text("You currently have " + result.credits.toString() + " credits.");
+                }
             }
         });
     }
