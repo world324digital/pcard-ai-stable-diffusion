@@ -699,7 +699,7 @@ function get_user_credits_shorcode($atts)
 {
    $user_id = get_current_user_id();
    $credits = get_user_meta($user_id, 'credits');
-   echo "You currently have " . $credits[0] . " credits.";
+   echo "You now have " . $credits[0] . " credits.";
 }
 
 add_shortcode('user_credits', 'get_user_credits_shorcode');

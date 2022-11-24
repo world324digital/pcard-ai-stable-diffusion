@@ -1,7 +1,7 @@
 $(document).ready(function () {
     getUserCredits();
 
-    $('.create-header a').click(function (e) {
+    $('.create-header a, .btn-create a').click(function (e) {
         e.preventDefault();
         var prompt = $('#prompt').val();
         prompt = "Landscape with a Light Blue Haze on a Clear Mirror Lake";
