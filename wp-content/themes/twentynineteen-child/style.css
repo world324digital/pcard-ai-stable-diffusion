@@ -454,6 +454,8 @@ select:focus>option:checked {
 .toggle-menu .hfe-menu-item {
   padding-top: 10px !important;
   padding-bottom: 10px !important;
+  display: flow-root !important;
+  text-align: end;
 }
 
 .toggle-menu .hfe-nav-menu-icon {
@@ -696,8 +698,7 @@ select:focus>option:checked {
   display: none;
 }
 
-.modifier-container {
-}
+.modifier-container {}
 
 #card-message p {
   max-width: 640px;
@@ -826,10 +827,24 @@ ul.sub-menu li.hide {
     padding-top: 5px;
     padding-bottom: 10px;
   }
+
+  .header-menu a {
+    padding: 10px !important;
+  }
+
+  .description-background,
+  .description-content {
+    height: 200px;
+  }
+
+  .home-description-odd .description-background {
+    order: -1;
+  }
 }
 
 .pricing-item .item-right input[type='submit'] {
-  color: #0073aa !important;;
+  color: #0073aa !important;
+  ;
   border: 1px solid #0073aa !important;
   font-family: "Montserrat", Sans-serif !important;
   font-size: 15px !important;
@@ -844,4 +859,15 @@ ul.sub-menu li.hide {
   color: white !important;
   border-color: #0073aa !important;
   background: #0073aa !important;
+}
+
+.uwp-login-class .uwp-footer-links {
+  display: grid !important;
+}
+
+@media only screen and (max-width: 480px) {
+  #wow-modal-window-2 {
+    width: 70% !important;
+    padding: 20px !important;
+  }
 }

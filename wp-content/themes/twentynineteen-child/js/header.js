@@ -19,13 +19,13 @@ $(document).ready(function () {
                 data: data,
                 success: function (response) {
                     var result = JSON.parse(response);
-                    
+
                     // Generatign 6 images
                     // if (result.klms != undefined && result.ddim != undefined) {
                     //     localStorage.setItem('prompt', prompt);
                     //     window.location.href = CONFIG.siteUrl + '/create-image?id1=' + result.klms + '&id2=' + result.ddim;
                     // }
-                    
+
                     // Generating 3 images 
                     if (result.klms != undefined) {
                         localStorage.setItem('prompt', prompt);
@@ -62,7 +62,10 @@ $(document).ready(function () {
                 'action': 'get_user_credits_action'
             },
             success: function (response) {
-                var result = JSON.parse(response);
+                var result = "0";
+                if (response) {
+                    result = JSON.parse(response);
+                }
                 $('#credit-value').text(result);
                 $('.credit_value').text(result);
             }
