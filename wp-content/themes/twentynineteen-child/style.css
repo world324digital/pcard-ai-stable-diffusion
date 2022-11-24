@@ -614,8 +614,10 @@ select:focus>option:checked {
 }
 
 .share-container {
-  width: 270px;
+  /* width: 270px; */
+  max-width: 768px;
   margin: auto;
+  align-items: center;
 }
 
 .social-icons {
@@ -880,4 +882,18 @@ ul.sub-menu li.hide {
   background-size: 0.6em;
   background-position: calc(100% - 1.3em) center;
   background-repeat: no-repeat;
+}
+
+.share-left {
+  padding: 0 !important;
+}
+
+.share-right > div {
+  box-shadow: -1px 10px 10px 0px rgb(0 0 0 / 16%);
+  padding: 21px;
+  border-radius: 20px;
+}
+
+#btn-view {
+  display: none;
 }

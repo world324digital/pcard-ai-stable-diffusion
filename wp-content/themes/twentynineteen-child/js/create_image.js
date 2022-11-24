@@ -57,6 +57,7 @@ $(document).ready(function () {
         var imageUrl = $(this).parent('.result-image').data('url');
         $('#wow-modal-window-1').find('.down-image img').attr('src', imageUrl);
         $('#wow-modal-id-1').trigger('click');
+        $('#image-share').attr('style', "background: transparent url(" + imageUrl + ") 0% 0% no-repeat padding-box;");
     })
 
     $('#share-image').click(function () {

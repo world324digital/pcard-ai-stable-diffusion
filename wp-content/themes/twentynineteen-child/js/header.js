@@ -44,6 +44,11 @@ $(document).ready(function () {
     $('.credit-menu').click(function () {
         $('#wow-modal-id-2').trigger('click');
     });
+    
+    $('.share, .share a').click(function (e) {
+        e.preventDefault();
+        shareImage();
+    });
 
     $('.pricing-item .item-right input[type="submit"]').click(function (e) {
         e.preventDefault();
@@ -68,6 +73,26 @@ $(document).ready(function () {
                 }
                 $('#credit-value').text(result);
                 $('.credit_value').text(result);
+            }
+        });
+    }
+
+    function shareImage() {
+        var data = {
+            'action': 'share_action'
+        };
+
+        $.ajax({
+            type: 'POST',
+            url: CONFIG.ajaxUrl,
+            data: data,
+            success: function (response) {
+                var result = JSON.parse(response);
+                console.log(result.credits);
+                if (result.status == 'success') {
+                    $('#credit-value').text(result.credits.toString());
+                    $('.credit_value').text(result.credits.toString());
+                }
             }
         });
     }

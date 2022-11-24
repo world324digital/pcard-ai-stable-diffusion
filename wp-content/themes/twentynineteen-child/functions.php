@@ -762,3 +762,22 @@ function add_user_credits()
    echo json_encode($result);
    wp_die();
 }
+
+add_action('wp_ajax_share_action', 'share_image');
+add_action('wp_ajax_nopriv_share_action', 'share_image');
+
+function share_image()
+{
+   $result = array(
+      'status' => 'fail',
+      'credits' => '0'
+   );
+   $user_id = get_current_user_id();
+   $current_credits = get_user_meta($user_id, 'credits')[0];
+   $updated_amount = 3 + (int)$current_credits;
+   update_user_meta($user_id, 'credits', $updated_amount);
+   $result['status'] = 'success';
+   $result['credits'] = $updated_amount;
+   echo json_encode($result);
+   wp_die();
+}

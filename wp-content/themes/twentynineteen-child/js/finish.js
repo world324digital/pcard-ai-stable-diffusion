@@ -7,6 +7,7 @@ $(document).ready(function () {
     if (imageUrl != undefined) {
         $('#front-image').attr('style', "background: transparent url(" + imageUrl + ") 0% 0% no-repeat padding-box;");
         $('#front-image').attr('data-url', imageUrl);
+        $('#image-share').attr('style', "background: transparent url(" + imageUrl + ") 0% 0% no-repeat padding-box;");
     }
 
     $('.heart-icon').click(function () {
